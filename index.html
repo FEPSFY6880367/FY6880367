@@ -1,58 +1,15 @@
 <!DOCTYPE html>
 
 
-<html>
-  <div id="last-updated">Loading last update time...</div>
-<!-- Verify Button -->
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-    Verify Last Modified Time
-</button>
-<script>
-    async function getLastUpdatedTime() {
-        const username = 'FEPSFY6880367';
-        const repo = 'FY6880367';
-       
-        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-        try {
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-            }
-            const commits = await response.json();
-            if (commits && commits.length > 0) {
-                const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
-                // Displaying the time on load
-                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-            } else {
-                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-            }
-        } catch (error) {
-            console.error('Error fetching the last updated time:', error);
-            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
-        }
-    }
-    // Function to verify the last update time by re-fetching it from the API
-    async function verifyLastUpdatedTime() {
-        document.getElementById('last-updated').innerText = 'Verifying...';
-        await getLastUpdatedTime();
-        alert("Last modified time has been successfully verified from GitHub API.");
-    }
-    // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
+<html> 
   
 <head>
   <head>
   <img src="university-of-surrey-logo-png-transparent.png" alt="Banner" width="1200" height="300">
   <h1><b>ENG0018 Computer Laboratory 2024/25</b><h1>
   <h2>Student URN: 6880367</h2>
-    <h3 id="date&time"></h3> 
-  <hr>
+  </head>
+    <hr>
   <h2 style="font-family:calibri;"><b>Conference paper: How does the aerodynamic design of a car impact its success in modern day F1?</b></h2>
   <hr>
   <!style for tables>
@@ -84,10 +41,7 @@
     margin-left: 250px;
   }
   </style>
-    <script>
-      const d = new Date();
-      document.getElementById("date&time").innerHTML = d;
-  </script>
+
     </head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -133,7 +87,7 @@
       </pre>
   </p>
 <h3 id="Introduction">Introduction</h3>
-<p class="ex1">
+<p id="Introduction_InText" class="ex1">
   <pre>
     Aerodynamics is one of the most pivotal considerations for engineers when designing a Formula 1 car, as it governs the behaviour of airflow
     around the vehicle. Which significantly influences the car’s handling characteristics, particularly its grip and stability through corners,
@@ -223,7 +177,55 @@ Toet, W. (2013) ‘Aerodynamics and aerodynamic research in Formula 1’, The Ae
     </p>
 
   <video src="6880367 Conference Presentation.mp4" width="800" height="450" controls>
-    <video>
+  </video>
+
+
       
+<div id="last-updated">Loading last update time...</div>
+<!-- Verify Button -->
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    Verify Last Modified Time
+</button>
+<script>
+    async function getLastUpdatedTime() {
+        const username = 'FEPSFY6880367';
+        const repo = 'FY6880367';
+       
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
+            const commits = await response.json();
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+               
+                // Displaying the time on load
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+            }
+        } catch (error) {
+            console.error('Error fetching the last updated time:', error);
+            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+        }
+    }
+    // Function to verify the last update time by re-fetching it from the API
+    async function verifyLastUpdatedTime() {
+        document.getElementById('last-updated').innerText = 'Verifying...';
+        await getLastUpdatedTime();
+        alert("Last modified time has been successfully verified from GitHub API.");
+    }
+    // Initial load to display the time on page load
+    window.onload = getLastUpdatedTime;
 </script>
+
+  </html>
+
 
