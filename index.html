@@ -99,18 +99,18 @@
   </p>
     <h3 id="Analysis-and-discussion">Analysis-and-discussion</h3>
     <p id="Analysis_InText" class="ex1">
-      
-        Drag is considered the force that opposes the motion of a body. In a study by <a href=https://surrey.primo.exlibrisgroup.com/discovery/fulldisplay?docid=cdi_crossref_primary_10_47611_jsrhs_v10i2_1475&context=PC&vid=44SUR_INST:44SUR_VU1&lang=en&search_scope=MyInst_andCI_ResearchOnlyInventory&adaptor=Primo%20Central&tab=Everything&query=any,contains,pandit%20f1&offset=0">Pandit, A. & Day, G. (2021).</a>., it was mentioned that drag
-        can be produced in two ways, Friction and Pressure. In the case of an F1 car, the chassis collides with air particles at speed,
-        which cause an opposing motion leading to the car needing to generate more thrust to maintain velocity. This is called aerodynamic drag
-        which occurs naturally, and teams will design their cars to counter this effect to lose minimal time on the straights,
-        the other type of drag is induced, meaning it is created because of the teams own aerodynamic concepts applied ot the car.
-        As mentioned by <a href=https://surrey.primo.exlibrisgroup.com/discovery/fulldisplay?docid=cdi_crossref_primary_10_47611_jsrhs_v10i2_1475&context=PC&vid=44SUR_INST:44SUR_VU1&lang=en&search_scope=MyInst_andCI_ResearchOnlyInventory&adaptor=Primo%20Central&tab=Everything&query=any,contains,pandit%20f1&offset=0">Pandit, A. & Day, G. (2021)</a>., its created by a pressure difference between the two ends of the body, as force acts from an area
-        of high pressure to an area of low pressure. Downforce is a force produced in the same direction as the weight, by directing air away from the car,
-        it pushes the body into the ground allowing cars to take corners at higher speeds without the risk of sliding, which makes the car faster over
-        the course of a lap. However, increased downforce also come with the cost of increasing drag, so engineers have to design they components to
-        find an optimal balance between the two.
-    
+  </pre>
+    Drag is considered the force that opposes the motion of a body. In a study by <a href=https://surrey.primo.exlibrisgroup.com/discovery/fulldisplay?docid=cdi_crossref_primary_10_47611_jsrhs_v10i2_1475&context=PC&vid=44SUR_INST:44SUR_VU1&lang=en&search_scope=MyInst_andCI_ResearchOnlyInventory&adaptor=Primo%20Central&tab=Everything&query=any,contains,pandit%20f1&offset=0">Pandit, A. & Day, G. (2021).</a>., it was mentioned that drag
+    can be produced in two ways, Friction and Pressure. In the case of an F1 car, the chassis collides with air particles at speed,
+    which cause an opposing motion leading to the car needing to generate more thrust to maintain velocity. This is called aerodynamic drag
+    which occurs naturally, and teams will design their cars to counter this effect to lose minimal time on the straights,
+    the other type of drag is induced, meaning it is created because of the teams own aerodynamic concepts applied ot the car.
+    As mentioned by <a href=https://surrey.primo.exlibrisgroup.com/discovery/fulldisplay?docid=cdi_crossref_primary_10_47611_jsrhs_v10i2_1475&context=PC&vid=44SUR_INST:44SUR_VU1&lang=en&search_scope=MyInst_andCI_ResearchOnlyInventory&adaptor=Primo%20Central&tab=Everything&query=any,contains,pandit%20f1&offset=0">Pandit, A. & Day, G. (2021)</a>., its created by a pressure difference between the two ends of the body, as force acts from an area
+    of high pressure to an area of low pressure. Downforce is a force produced in the same direction as the weight, by directing air away from the car,
+    it pushes the body into the ground allowing cars to take corners at higher speeds without the risk of sliding, which makes the car faster over
+    the course of a lap. However, increased downforce also come with the cost of increasing drag, so engineers have to design they components to
+    find an optimal balance between the two.
+    </pre>
   </p>
     <h3 id="Airfoil Design">Airfoil Design</h3>
     <p id="AirfoilDesgin_InText"class="ex1">
@@ -242,12 +242,15 @@ Toet, W. (2013) ‘Aerodynamics and aerodynamic research in Formula 1’, The Ae
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    const AirfoilCount = displayWordCount("AirfoilDesgin_InText");
-    const AngleCount = displayWordCount("DeterminingAngle_InText");
-    const WhereAngleCount = displayWordCount("DecidingAngle_InText");
-    const ConclusionCount = displayWordCount("Conclusion_InText");
+     const sections = [
+      "Introduction_InText",
+      "Analysis_InText",
+      "AirfoilDesgin_InText",
+      "DeterminingAngle_InText",
+      "DecidingAngle_InText",
+      "Conclusion_InText",
+    ];
+
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
