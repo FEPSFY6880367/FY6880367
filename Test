@@ -93,7 +93,7 @@
 </p>
 
 <h3 id="Airfoil-Design">Airfoil Design</h3>
-<p class="ex1">
+<p id="Airfoil_Design_InText" class="ex1">
     The base component of an aerodynamic object is called the airfoil, often derived from a teardrop shape. Due to its irregular form, air traveling
     over the upper surface of an airfoil travels a greater distance than that over the lower surface, increasing velocity. This difference causes
     a pressure differential, which engineers utilize to increase pressure across certain areas, optimizing downforce or reducing drag. The angle
@@ -101,7 +101,7 @@
 </p>
 
 <h3 id="Determining-the-angle-of-attack">Determining the Angle of Attack</h3>
-<p class="ex1">
+<p id="Angle_Attack_InText" class="ex1">
     Engineers face challenges in determining the angle of attack, as it involves trade-offs between downforce and drag. Increasing the angle of attack
     generates more downforce but also increases drag. Testing at different angles, as demonstrated in studies, reveals that a 12.5° angle of attack
     provides an optimal balance, producing significant downforce with manageable drag. This optimization enhances cornering performance while maintaining
@@ -109,7 +109,7 @@
 </p>
 
 <h3 id="Deciding-when-and-where-to-use-different-angles-of-attack">Deciding When and Where to Use Different Angles of Attack</h3>
-<p class="ex1">
+<p id="Angle_Use_InText" class="ex1">
     Engineers tailor aerodynamic settings to specific circuits. For instance, tracks like Monza prioritize minimal drag due to high-speed straights,
     favoring lower angles of attack. Conversely, tracks like Monaco require higher downforce and grip, utilizing higher angles for better cornering
     performance. This strategic flexibility is key to maximizing performance.
@@ -136,11 +136,19 @@
         return wordArray.length;
     }
 
-    // Function to calculate and display total word count
+    // Function to calculate and display total word count excluding Abstract and References
     function displayTotalWordCount() {
-        const IntroductionCount = displayWordCount("Introduction_InText");
-        const AnalysisCount = displayWordCount("Analysis_InText");
-        const totalWordCount = IntroductionCount + AnalysisCount;
+        const sections = [
+            "Introduction_InText",
+            "Analysis_InText",
+            "Airfoil_Design_InText",
+            "Angle_Attack_InText",
+            "Angle_Use_InText"
+        ];
+        let totalWordCount = 0;
+        for (const sectionId of sections) {
+            totalWordCount += displayWordCount(sectionId);
+        }
         document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
     }
 
