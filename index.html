@@ -125,7 +125,7 @@
       </pre>
   </p>
     <h3 id="Determining the angle of attack">Determining the angle of attack</h3>
-    <p class="ex1">
+    <p id="DeterminingAngle_InText"class="ex1">
       <pre>
         Determining the angle of attack comes as challenge, engineers are usually faced with the issue on whether to sacrifice either downforce
         or drag, increasing the angle of attack would generate more downforce, while also increasing drag. To optimise this, engineers run tests
@@ -140,7 +140,7 @@
         </pre>
   </p>
     <h3 id="Deciding when and where to use different angles of attack">Deciding when and where to use different angles of attack</h3>
-    <p class="ex1">
+    <p id="DecidingAngle_InText"class="ex1">
       <pre>
     However as mentioned earlier, engineers need to choose whether they want maximum downforce on the car or not, as <a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/28EC86A06970952DDCB17A3A670CAC90/S0001924000007739a.pdf/aerodynamics_and_aerodynamic_research_in_formula_1.pdf">Toet (2013).</a>mentioned,
         “Aerodynamic settings (such as the front and rear wings) and hence the drag of the car are optimized to suit individual circuits” 
@@ -152,7 +152,7 @@
             </pre>
   </p>
     <h3 id="Conclusion">Conclusion</h3>
-    <p class="ex1">
+    <p id="Conclusion_InText" class="ex1">
       <pre>
         To conclude, A Formula 1 car's performance in modern racing is largely dependent on its aerodynamic design. Engineers may increase the
         car's speed, stability, and cornering abilities by carefully balancing drag and downforce. In order to achieve this balance and enable
@@ -245,6 +245,9 @@ Toet, W. (2013) ‘Aerodynamics and aerodynamic research in Formula 1’, The Ae
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AnalysisCount = displayWordCount("Analysis_InText");
     const AirfoilCount = displayWordCount("AirfoilDesgin_InText");
+    const AngleCount = displayWordCount("DeterminingAngle_InText");
+    const WhereAngleCount = displayWordCount("DecidingAngle_InText");
+    const ConclusionCount = displayWordCount("Conclusion_InText");
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
